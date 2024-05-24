@@ -84,7 +84,12 @@ class Torneo{
         $ganadorPartido = ['equipoGanador'=>"Partido invalido.",'premioPartido'=> -1];
         if($objPartido->getIdpartido() != null){
             $premioPartido = $objPartido->coeficientePartido() * $this->getImportePremio();
-            $ganadorPartido = ['equipoGanador'=>$objPartido->darEquipoGanador(),'premioPartido'=>$premioPartido];
+            if(count($objPartido->darEquipoGanador())>1){
+                $ganadorPartido = ['equipoGanador'=>"Fue un empate.",'premioPartido'=>$premioPartido];
+            }else{
+                $ganadorPartido = ['equipoGanador'=>$objPartido->darEquipoGanador(),'premioPartido'=>$premioPartido];
+            }
+            
         }
         return $ganadorPartido;
     }

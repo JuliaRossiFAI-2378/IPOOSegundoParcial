@@ -74,7 +74,7 @@ $premio3 = $torneo->calcularPremioPartido($partidoIngresado3);
 echo "\n--------------PREMIOS-----------------------\n";
 echo "\n".$premio1['equipoGanador']." Premio partido: ".$premio1['premioPartido']."\n";
 echo "\n".$premio2['equipoGanador']." Premio partido: ".$premio2['premioPartido']."\n";
-echo "\n".$premio3['equipoGanador']." Premio partido: ".$premio3['premioPartido']."\n"; //no se pudo arreglar el error array to string por falta de tiempo.
+echo "\n".$premio3['equipoGanador']." Premio partido: ".$premio3['premioPartido']."\n"; 
 
 //punto 4
 echo $torneo;
